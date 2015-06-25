@@ -19,10 +19,12 @@ int * shuffle_array(int * a, int b)
 */
 void print_array(int * arr, int size)
 {
+	int * itr = arr;
 	cout << "[" << endl;
 	for(int i = 0; i < size; i++)
 	{
-		cout << arr[i] << endl;
+		cout << *itr << endl;
+		itr++;
 	}
 	cout << "]" << endl;
 }
