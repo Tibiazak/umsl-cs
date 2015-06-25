@@ -5,7 +5,6 @@ using namespace std;
 
 void initialize_array(int * arr, int size)
 {
-	arr = new int[size];
 	int * itr = arr;
 	for(int i = 0; i < size; i++)
 	{
@@ -45,7 +44,7 @@ int main()
 			valid = true;
 	}
 	cout << "After while loop, size is: " << size << endl;
-	int * arr = 0;
+	int * arr = new int[size];
 	cout << "Before initialize_array" << endl;
 	initialize_array(arr, size);
 	cout << "After initialize_array, before print_array" << endl;
