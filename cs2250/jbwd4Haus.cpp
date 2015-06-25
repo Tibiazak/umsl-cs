@@ -88,6 +88,7 @@ int main()
 	print_array(arr, size);
 	//cout << "After print_array" << endl;
 	int * shuf_arr = shuffle_array(arr, size);
+	print_array(shuf_arr, size);
 	delete[] arr;
 	delete[] shuf_arr;
 	return 0;
