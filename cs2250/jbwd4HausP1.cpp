@@ -49,7 +49,7 @@ int * shuffle_array(int * arr, int size)
 void print_array(int * arr, int size)
 {
 	int * itr = arr;
-	cout << "Original array is: [";
+	cout << "[";
 	for(int i = 0; i < size; i++)
 	{
 		cout << *itr << " ";
@@ -74,9 +74,11 @@ int main()
 	//cout << "Before initialize_array" << endl;
 	initialize_array(arr, size);
 	//cout << "After initialize_array, before print_array" << endl;
+	cout << "Original array is: ";
 	print_array(arr, size);
 	//cout << "After print_array" << endl;
 	int * shuf_arr = shuffle_array(arr, size);
+	cout << "Shuffled array is: ";
 	print_array(shuf_arr, size);
 	delete[] arr;
 	delete[] shuf_arr;
