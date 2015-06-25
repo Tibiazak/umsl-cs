@@ -1,13 +1,16 @@
 #include <cstdlib>
 #include <iostream>
+#include <new>
 using namespace std;
 
 void initialize_array(int * arr, int size)
 {
 	arr = new int[size];
+	int * itr = arr;
 	for(int i = 0; i < size; i++)
 	{
-		arr[i] = i;
+		*itr = i;
+		itr++;
 	}
 }
 
@@ -49,7 +52,7 @@ int main()
 	print_array(arr, size);
 	cout << "After print_array" << endl;
 	//int * shuf_arr = shuffle_array(arr, size);
-	delete arr;
+	delete[] arr;
 	//delete shuf_arr;
 	return 0;
 }
