@@ -11,11 +11,12 @@ void initialize_array(int * arr, int size)
 	}
 }
 
+/* 
 int * shuffle_array(int * a, int b)
 {
 	
 }
-
+*/
 void print_array(int * arr, int size)
 {
 	cout << "[";
@@ -39,7 +40,7 @@ int main()
 			valid = true;
 	}
 	cout << "After while loop, size is: " << size << endl;
-	int * arr;
+	int * arr = 0;
 	cout << "Before initialize_array" << endl;
 	initialize_array(arr, size);
 	cout << "After initialize_array, before print_array" << endl;
