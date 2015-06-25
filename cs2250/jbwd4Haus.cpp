@@ -22,10 +22,10 @@ int * shuffle_array(int * a, int b)
 void print_array(int * arr, int size)
 {
 	int * itr = arr;
-	cout << "[" << endl;
+	cout << "[";
 	for(int i = 0; i < size; i++)
 	{
-		cout << *itr << endl;
+		cout << *itr;
 		itr++;
 	}
 	cout << "]" << endl;
@@ -43,13 +43,13 @@ int main()
 		if (0 < size && size <= 52)
 			valid = true;
 	}
-	cout << "After while loop, size is: " << size << endl;
+	//cout << "After while loop, size is: " << size << endl;
 	int * arr = new int[size];
-	cout << "Before initialize_array" << endl;
+	//cout << "Before initialize_array" << endl;
 	initialize_array(arr, size);
-	cout << "After initialize_array, before print_array" << endl;
+	//cout << "After initialize_array, before print_array" << endl;
 	print_array(arr, size);
-	cout << "After print_array" << endl;
+	//cout << "After print_array" << endl;
 	//int * shuf_arr = shuffle_array(arr, size);
 	delete[] arr;
 	//delete shuf_arr;
