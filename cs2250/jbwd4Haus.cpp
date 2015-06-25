@@ -40,8 +40,11 @@ int main()
 	}
 	cout << "After while loop, size is: " << size << endl;
 	int * arr;
+	cout << "Before initialize_array" << endl;
 	initialize_array(arr, size);
+	cout << "After initialize_array, before print_array" << endl;
 	print_array(arr, size);
+	cout << "After print_array" << endl;
 	//int * shuf_arr = shuffle_array(arr, size);
 	delete arr;
 	//delete shuf_arr;
