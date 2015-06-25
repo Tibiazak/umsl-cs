@@ -1,5 +1,5 @@
 #include <cstdlib>
-//#include <iostream>
+#include <iostream>
 #include <new>
 #include <time.h>
 using namespace std;
@@ -21,6 +21,7 @@ int * shuffle_array(int * arr, int size)
 	srand (time(NULL));
 	int * shuf_arr = new int[size];
 	int * shuf_itr = shuf_arr;
+	int j = 0;
 
 	for (int i = size-1; i >= 1; i--)
 	{
