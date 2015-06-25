@@ -38,6 +38,7 @@ int main()
 		if (0 < size && size <= 52)
 			valid = true;
 	}
+	cout << "After while loop, size is: " << size << endl;
 	int * arr;
 	initialize_array(arr, size);
 	print_array(arr, size);
