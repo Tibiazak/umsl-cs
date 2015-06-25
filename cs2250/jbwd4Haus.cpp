@@ -17,42 +17,31 @@ void initialize_array(int * arr, int size)
 
 int * shuffle_array(int * arr, int size)
 {
-	int * itr = arr; //array iterator
 	srand (time(NULL));
 	int * shuf_arr = new int[size];
-	int * shuf_itr = shuf_arr;
+	initialize_array(shuf_arr, size);
+	int * itr1 = shuf_arr;
+	int * itr2 = shuf_arr;
 	int j = 0;
+	int temp = 0;
 
 	for (int i = size-1; i >= 1; i--)
 	{
 		j = rand() % i+1;
-		cout << j << endl; //debugging
-		
-		//shuffled array gets arr[j] in the arr[i]th position
-		//shuf_arr[i] = arr[j]
-		for(int k = 0; k < j; k++)
-		{
-			itr++;
-		}
-		for(int k = 0; k < i; k++)
-		{
-			shuf_itr++;
-		}
-		*shuf_itr = *itr;
 
-		//shuffled array gets arr[i] in the arr[j]th position
-		//shuf_arr[j] = arr[i]
-		shuf_itr = shuf_arr;
-		itr = arr;
 		for(int k = 0; k < i; k++)
 		{
-			itr++;
+			itr1++;
 		}
 		for(int k = 0; k < j; k++)
 		{
-			shuf_itr++;
+			itr2++;
 		}
-		*shuf_itr = *itr;
+		temp = *itr1;
+		*itr1 = *itr2;
+		*itr2 = temp;
+		itr1 = shuf_arr;
+		itr2 = shuf_arr;
 	}
 	return shuf_arr;
 }
