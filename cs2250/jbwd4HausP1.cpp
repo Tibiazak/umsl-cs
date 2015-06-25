@@ -4,6 +4,7 @@
 #include <time.h>
 using namespace std;
 
+//Method to initialize an array with sequential ints
 void initialize_array(int * arr, int size)
 {
 	int * itr = arr;
@@ -14,38 +15,51 @@ void initialize_array(int * arr, int size)
 	}
 }
 
-
+//Method to shuffle an array
 int * shuffle_array(int * arr, int size)
 {
-	srand (time(NULL));
+	srand (time(NULL)); //seed the random number generator
+	
+	//allocate memory for the new shuffled array
+	//and initialize it with sequential numbers
 	int * shuf_arr = new int[size];
 	initialize_array(shuf_arr, size);
+	
+	//iterators for the swap
 	int * itr1 = shuf_arr;
 	int * itr2 = shuf_arr;
+	
+	//some helper integers
 	int j = 0;
 	int temp = 0;
 
+
 	for (int i = size-1; i >= 1; i--)
 	{
-		j = rand() % i+1;
+		j = rand() % i+1; //get a random number between 0 and i
 
+		//set itr1 = shuf_arr[i]
 		for(int k = 0; k < i; k++)
 		{
 			itr1++;
 		}
+		//set itr2 = shuf_arr[j]
 		for(int k = 0; k < j; k++)
 		{
 			itr2++;
 		}
+		//swap shuf_arr[i] and shuf_arr[j]
 		temp = *itr1;
 		*itr1 = *itr2;
 		*itr2 = temp;
+		//reset itr1 and itr2 for the next time through the loop
 		itr1 = shuf_arr;
 		itr2 = shuf_arr;
 	}
 	return shuf_arr;
 }
 
+//a method to loop through an array printing its elements
 void print_array(int * arr, int size)
 {
 	int * itr = arr;
@@ -62,24 +76,32 @@ int main()
 {
 	int size = 0;
 	bool valid = false;
+	//a loop for input validation, if the size is negative or greater
+	//than 52, the loop will simply prompt the user to enter another size.
 	while (!valid)
 	{
 		cout << "Please enter the size of the array: ";
 		cin >> size;
 		if (0 < size && size <= 52)
 			valid = true;
+		else
+			cout << "Invalid size, must be between 1 and 52" << endl;
 	}
-	//cout << "After while loop, size is: " << size << endl;
+
+	//dynamically allocate memory for the array and initialize it
 	int * arr = new int[size];
-	//cout << "Before initialize_array" << endl;
 	initialize_array(arr, size);
-	//cout << "After initialize_array, before print_array" << endl;
+
+	//print the original array
 	cout << "Original array is: ";
 	print_array(arr, size);
-	//cout << "After print_array" << endl;
+
+	//shuffle the original array and print the shuffled array
 	int * shuf_arr = shuffle_array(arr, size);
 	cout << "Shuffled array is: ";
 	print_array(shuf_arr, size);
+
+	//free up the memory and return from the main method
 	delete[] arr;
 	delete[] shuf_arr;
 	return 0;
