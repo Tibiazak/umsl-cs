@@ -72,6 +72,37 @@ void print_array(int * arr, int size)
 	cout << "]" << endl;
 }
 
+void split_up_array(int * arr, int size, int *& split1, int *& split2, int & size1, int & size2)
+{
+	//split the array into part A and part B
+	int middle = size/2;
+	split1 = new int[middle];
+	split2 = new int[size - middle];
+
+	size1 = middle;
+	size2 = size - middle;
+
+	int arr_itr = arr;
+	int split_itr = split1;
+
+	//fill part A
+	for (int i = 0; i < middle; i++)
+	{
+		*split_itr = *arr_itr;
+		arr_itr++;
+		split_itr++;
+	}
+
+	//fill part B
+	split_itr = split2;
+	for (int i = middle; i < size; i++)
+	{
+		*split_itr = *arr_itr;
+		arr_itr++;
+		split_itr++;
+	}
+}
+
 int main()
 {
 	int size = 0;
@@ -100,6 +131,21 @@ int main()
 	int * shuf_arr = shuffle_array(arr, size);
 	cout << "Shuffled array is: ";
 	print_array(shuf_arr, size);
+	
+	//split the shuffled array
+	//create variables
+	int split_array_size1 = 0;
+	int split_array_size2 = 0;
+	int * split_array1 = 0;
+	int * split_array2 = 0;
+
+	split_up_array(shuf_arr, size, split_array1, split_array2, split_array_size1, split_array_size2);
+	cout << "After call to split_array, shuffled array is: ";
+	print_array(shuf_arr, size);
+	cout << "After call to split_array, part A is: ";
+	print_array(split_array1, split_array_size1);
+	cout << "After call to split_array, part B is: ";
+	print_array(split_array2, split_array_size2);
 
 	//free up the memory and return from the main method
 	delete[] arr;
