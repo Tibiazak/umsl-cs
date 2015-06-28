@@ -75,18 +75,16 @@ void print_array(int * arr, int size)
 void split_up_array(int * arr, int size, int *& split1, int *& split2, int & size1, int & size2)
 {
 	//split the array into part A and part B
-	int middle = size/2;
-	split1 = new int[middle];
-	split2 = new int[size - middle];
-
-	size1 = middle;
-	size2 = size - middle;
+	int size1 = size/2;
+	int size2 = size - size1;
+	split1 = new int[size1];
+	split2 = new int[size2];
 
 	int * arr_itr = arr;
 	int * split_itr = split1;
 
 	//fill part A
-	for (int i = 0; i < middle; i++)
+	for (int i = 0; i < size1; i++)
 	{
 		*split_itr = *arr_itr;
 		arr_itr++;
@@ -95,7 +93,7 @@ void split_up_array(int * arr, int size, int *& split1, int *& split2, int & siz
 
 	//fill part B
 	split_itr = split2;
-	for (int i = middle; i < size; i++)
+	for (int i = size1; i < size; i++)
 	{
 		*split_itr = *arr_itr;
 		arr_itr++;
