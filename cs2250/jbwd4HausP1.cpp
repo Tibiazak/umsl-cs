@@ -4,6 +4,13 @@
 #include <time.h>
 using namespace std;
 
+/*
+Joshua Bearden
+6/29/15
+CS2250
+Program 1
+*/
+
 //Method to initialize an array with sequential ints
 void initialize_array(int * arr, int size)
 {
@@ -72,6 +79,8 @@ void print_array(int * arr, int size)
 	cout << "]" << endl;
 }
 
+//a method to split an array down the middle into two different arrays
+//and return their sizes
 void split_up_array(int * arr, int size, int *& split1, int *& split2, int & size1, int & size2)
 {
 	//split the array into part A and part B
