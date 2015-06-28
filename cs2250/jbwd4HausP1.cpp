@@ -119,37 +119,37 @@ void array_war(int * arr1, int size, int * arr2, int size2)
 	int * arr2_itr = arr2;
 	int * arrWin_itr = arrWin;
 
-	bool equal_arr = false;
-	bool size1_larger = false;
-	int smaller_size = winSize;
-
 	if(size == size2)
 	{
-		equal_arr = true;
+		for(int i = 0; i < arrWin; i++)
+		{
+			*arrWin_itr = ((*arr1_itr > *arr2_itr) ? *arr1_itr : *arr2_itr);
+			arrWin_itr++;
+			arr1_itr++;
+			arr2_itr++;
+		}
+	}
+	else if(size > size2);
+	{
+		for(int i = 0; i < size2; i++)
+		{
+			*arrWin_itr =((*arr1_itr > *arr2_itr) ? *arr1_itr : *arr2_itr);
+			arrWin_itr++;
+			arr1_itr++;
+			arr2_itr++;
+		}
+		*arrWin_itr = *arr1_itr;
 	}
 	else
 	{
-		if(size > size2)
+		for(int i = 0; i < size; i++)
 		{
-			smaller_size = size2;
+			*arrWin_itr =((*arr1_itr > *arr2_itr) ? *arr1_itr : *arr2_itr);
+			arrWin_itr++;
+			arr1_itr++;
+			arr2_itr++;
 		}
-		else
-		{
-			smaller_size = size;
-			size1_larger = true;
-		}
-	}
-
-	for(int i = 0; i < smaller_size; i++)
-	{
-		*arrWin_itr = ((*arr1_itr > *arr2_itr) ? *arr1_itr : *arr2_itr);
-		arr1_itr++;
-		arr2_itr++;
-		arrWin_itr++;
-		if(!equal_arr && ((i+1) == smaller_size))
-		{
-			*arrWin_itr = ((size1_larger) ? *arr1_itr : *arr2_itr);
-		}
+		*arrWin_itr = *arr2_itr;
 	}
 
 	cout << "ArrayFight winners were: ";
