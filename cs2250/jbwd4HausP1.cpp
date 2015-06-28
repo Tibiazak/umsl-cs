@@ -117,6 +117,8 @@ void sort_array(int * arr, int size)
 	int * smallest = arr;
 	int temp = 0;
 
+	cout << *leftBound << *itr << *smallest << endl;
+
 	for (int i = 0; i < size-1; i++)
 	{
 		for(int j = i; j < size; j++)
@@ -131,6 +133,7 @@ void sort_array(int * arr, int size)
 		temp = *leftBound;
 		*leftBound = *smallest;
 		*smallest = temp;
+		cout << "leftBound: " << *leftBound << endl;
 		leftBound++;
 		itr = leftBound;
 		smallest = leftBound;
