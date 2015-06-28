@@ -154,13 +154,38 @@ void array_war(int * arr1, int size, int * arr2, int size2)
 
 	cout << "ArrayFight winners were: ";
 	print_array(arrWin, winSize);
+
+	sort_array(arrWin, winSize);
+	cout << "Sorted ArrayFight winners were: ";
 }
-/*
+
 void sort_array(int * arr, int size)
 {
+	int * leftBound = arr;
+	int * itr = arr;
+	int * smallest = arr;
+	int temp = 0;
 
+	for (int i = 0; i < size-1; i++)
+	{
+		for(int j = i; j < size; j++)
+		{
+			itr++;
+			if(*itr < *smallest)
+			{
+				smallest = itr;
+			}
+		}
+
+		temp = *leftBound;
+		*leftBound = *smallest;
+		*smallest = temp;
+		leftBound++;
+		itr = leftBound;
+		smallest = leftBound;
+	}
 }
-*/
+
 int main()
 {
 	int size = 0;
