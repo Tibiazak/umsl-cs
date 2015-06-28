@@ -110,6 +110,58 @@ void split_up_array(int * arr, int size, int *& split1, int *& split2, int & siz
 	}
 }
 
+void array_war(int * arr1, int size, int * arr2, int size2)
+{
+	int winSize = ((size > size2) ? size : size2);
+	int * arrWin = new int[winSize];
+
+	int * arr1_itr = arr1;
+	int * arr2_itr = arr2;
+	int * arrWin_itr = arrWin;
+
+	bool equal_arr = false;
+	bool size1_larger = false;
+	int smaller_size = winSize;
+
+	if(size == size2)
+	{
+		equal_arr = true;
+	}
+	else
+	{
+		if(size > size2)
+		{
+			smaller_size = size2;
+		}
+		else
+		{
+			smaller_size = size;
+			size1_larger = true;
+		}
+	}
+
+	for(int i = 0; i < smaller_size; i++)
+	{
+		*arrWin_itr = ((*arr1_itr > *arr2_itr) ? *arr1_itr : *arr2_itr);
+		arr1_itr++;
+		arr2_itr++;
+		arrWin_itr++;
+	}
+
+	if(!equal_arr)
+	{
+		*arrWin_itr = ((size1_larger) ? *arr1_itr : *arr2_itr);
+	}
+
+	cout << "ArrayFight winners were: ";
+	print_array(arrWin, winSize);
+}
+/*
+void sort_array(int * arr, int size)
+{
+
+}
+*/
 int main()
 {
 	int size = 0;
@@ -154,8 +206,13 @@ int main()
 	cout << "After call to split_array, part B is: ";
 	print_array(split_array2, split_array_size2);
 
+	//call array_war
+	array_war(split_array1, split_array_size1, split_array2, split_array_size2);
+
 	//free up the memory and return from the main method
 	delete[] arr;
 	delete[] shuf_arr;
+	delete[] split_array1;
+	delete[] split_array2;
 	return 0;
 }
