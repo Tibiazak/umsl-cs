@@ -184,6 +184,9 @@ void array_war(int * arr1, int size, int * arr2, int size2)
 
 	sort_array(arrWin, winSize);
 	cout << "Sorted ArrayFight winners were: ";
+	print_array(arrWin, winSize);
+
+	delete[] arrWin;
 }
 
 
