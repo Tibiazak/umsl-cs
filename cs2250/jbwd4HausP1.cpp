@@ -129,7 +129,7 @@ void array_war(int * arr1, int size, int * arr2, int size2)
 			arr2_itr++;
 		}
 	}
-	else if(size > size2);
+	else if(size > size2)
 	{
 		for(int i = 0; i < size2; i++)
 		{
