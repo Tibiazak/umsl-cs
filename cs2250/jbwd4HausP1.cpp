@@ -121,7 +121,7 @@ void array_war(int * arr1, int size, int * arr2, int size2)
 
 	if(size == size2)
 	{
-		for(int i = 0; i < arrWin; i++)
+		for(int i = 0; i < winSize; i++)
 		{
 			*arrWin_itr = ((*arr1_itr > *arr2_itr) ? *arr1_itr : *arr2_itr);
 			arrWin_itr++;
