@@ -82,8 +82,8 @@ void split_up_array(int * arr, int size, int *& split1, int *& split2, int & siz
 	size1 = middle;
 	size2 = size - middle;
 
-	int arr_itr = arr;
-	int split_itr = split1;
+	int * arr_itr = arr;
+	int * split_itr = split1;
 
 	//fill part A
 	for (int i = 0; i < middle; i++)
