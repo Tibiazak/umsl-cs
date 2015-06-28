@@ -112,9 +112,6 @@ void split_up_array(int * arr, int size, int *& split1, int *& split2, int & siz
 
 void sort_array(int * arr, int size)
 {
-	cout << "The array going into sort_array: ";
-	print_array(arr, size);
-
 	int * leftBound = arr;
 	int * itr = arr;
 	int * smallest = arr;
@@ -126,7 +123,6 @@ void sort_array(int * arr, int size)
 		for(int j = i; j < size-1; j++)
 		{
 			itr++;
-			cout << "value in question is: " << *itr << endl;
 			if(*itr < *smallest)
 			{
 				smallest = itr;
@@ -136,7 +132,6 @@ void sort_array(int * arr, int size)
 		temp = *leftBound;
 		*leftBound = *smallest;
 		*smallest = temp;
-		cout << "leftBound: " << *leftBound << endl;
 		leftBound++;
 		itr = leftBound;
 		smallest = leftBound;
