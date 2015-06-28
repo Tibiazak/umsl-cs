@@ -75,8 +75,8 @@ void print_array(int * arr, int size)
 void split_up_array(int * arr, int size, int *& split1, int *& split2, int & size1, int & size2)
 {
 	//split the array into part A and part B
-	int size1 = size/2;
-	int size2 = size - size1;
+	size1 = size/2;
+	size2 = size - size1;
 	split1 = new int[size1];
 	split2 = new int[size2];
 
