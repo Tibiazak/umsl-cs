@@ -117,7 +117,14 @@ void sort_array(int * arr, int size)
 	int * smallest = arr;
 	int temp = 0;
 
-
+	//for every element up to the second to last element
+	//check if it's smaller than the current smallest
+	//if it is, keep the address in the pointer "smallest"
+	//then after all elements have been checked, swap the
+	//current leftmost element with the element smallest
+	//points to. Increment smallest and leftbound after each
+	//swap. The loop stops after the second to last element
+	//because the last element will by necessity be sorted
 	for (int i = 0; i < size-1; i++)
 	{
 		for(int j = i; j < size-1; j++)
@@ -138,6 +145,9 @@ void sort_array(int * arr, int size)
 	}
 }
 
+//method to compare parallel elements in two arrays
+//and add the greater elements to an array
+//then print the array, as well as its sorted equivalent
 void array_war(int * arr1, int size, int * arr2, int size2)
 {
 	int winSize = ((size > size2) ? size : size2);
@@ -147,8 +157,13 @@ void array_war(int * arr1, int size, int * arr2, int size2)
 	int * arr2_itr = arr2;
 	int * arrWin_itr = arrWin;
 
+	//if-elseif-else block to handle odd-sized arrays
+	//if equal size
 	if(size == size2)
 	{
+		//for every element up to size of the winner array
+		//compare the parallel elements in array1 and array2
+		//put the bigger one in the parallel space in winner array.
 		for(int i = 0; i < winSize; i++)
 		{
 			*arrWin_itr = ((*arr1_itr > *arr2_itr) ? *arr1_itr : *arr2_itr);
@@ -157,6 +172,11 @@ void array_war(int * arr1, int size, int * arr2, int size2)
 			arr2_itr++;
 		}
 	}
+	//if the arrays are of unequal sizes, for every element
+	//up to the size of the smaller array, compare the parallel
+	//elements and add the larger to the winner array.
+	//then take the next element from the larger array and add
+	//it to the end of the winner array.
 	else if(size > size2)
 	{
 		for(int i = 0; i < size2; i++)
