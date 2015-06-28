@@ -114,19 +114,19 @@ void sort_array(int * arr, int size)
 {
 	cout << "The array going into sort_array: ";
 	print_array(arr, size);
-	
+
 	int * leftBound = arr;
 	int * itr = arr;
 	int * smallest = arr;
 	int temp = 0;
 
-	cout << *leftBound << *itr << *smallest << endl;
 
 	for (int i = 0; i < size-1; i++)
 	{
 		for(int j = i; j < size; j++)
 		{
 			itr++;
+			cout << "value in question is: " << *itr << endl;
 			if(*itr < *smallest)
 			{
 				smallest = itr;
