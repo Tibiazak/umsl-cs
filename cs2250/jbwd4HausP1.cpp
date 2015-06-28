@@ -146,11 +146,10 @@ void array_war(int * arr1, int size, int * arr2, int size2)
 		arr1_itr++;
 		arr2_itr++;
 		arrWin_itr++;
-	}
-
-	if(!equal_arr)
-	{
-		*arrWin_itr = ((size1_larger) ? *arr1_itr : *arr2_itr);
+		if(!equal_arr && ((i+1) == smaller_size))
+		{
+			*arrWin_itr = ((size1_larger) ? *arr1_itr : *arr2_itr);
+		}
 	}
 
 	cout << "ArrayFight winners were: ";
