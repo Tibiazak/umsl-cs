@@ -42,22 +42,63 @@ void translate(Word * wordArr, int size)
 {
 	string appendCon = "ay";
 	string appendVow = "way";
+	bool lastWord = false;
 
 	for(int i = 0; i < size; i++)
 	{
 		char firstLetter = wordArr[i].english[0];
+		if(i == size-1)
+		{
+			lastWord = true;
+		}
 		if((firstLetter == 'a' || firstLetter == 'e') || (firstLetter == 'i' || firstLetter == 'o') || (firstLetter == 'u'))
 		{
 			wordArr[i].piglatin = wordArr[i].english;
-			wordArr[i].piglatin += appendVow;
+			if(lastWord)
+			{
+				lastChar = wordArr[i].piglatin.at(wordArr[i].piglatin.size()-1);
+				if(!(lastChar < 'z' && lastChar > 'a'))
+				{
+					wordArr[i].piglatin.erase(wordArr[i].piglatin.size()-1, 1);
+					wordArr[i].piglatin += appendVow;
+					wordArr[i].piglatin += lastChar;
+				}
+				else
+				{
+					wordArr[i].piglatin += appendVow;
+				}
 
+			}
+			else
+			{
+				wordArr[i].piglatin += appendVow;
+			}
 		}
 		else
 		{
 			wordArr[i].piglatin = wordArr[i].english;
 			wordArr[i].piglatin.erase(0,1);
-			wordArr[i].piglatin += firstLetter;
-			wordArr[i].piglatin += appendCon;
+			if(lastWord)
+			{
+				lastChar = wordArr[i].piglatin.at(wordArr[i].piglatin.size()-1);
+				if(!(lastChar < 'z' && lastChar > 'a'))
+				{
+					wordArr[i].piglatin.erase(wordArr[i].piglatin.size()-1, 1);
+					wordArr[i].piglatin += firstLetter;
+					wordArr[i].piglatin += appendCon;
+					wordArr[i].piglatin += lastChar;
+				}
+				else
+				{
+					wordArr[i].piglatin += firstLetter;
+					wordArr[i].piglatin += appendCon;
+				}
+			}
+			else
+			{
+				wordArr[i].piglatin += firstLetter;
+				wordArr[i].piglatin += appendCon;
+			}
 		}
 	}
 }
