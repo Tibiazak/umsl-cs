@@ -79,7 +79,7 @@ int main()
 	int size = 0;
 	Word * wordArr = 0;
 	wordArr = init_array(sentence, size);
-	cout << returned from wordArr << endl;
+	cout << "returned from wordArr" << endl;
 	//translate(wordArr, size);
 	//cout << "Output:" << endl;
 	//showTranslation(wordArr, size);
