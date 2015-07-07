@@ -76,6 +76,7 @@ void translate(Word * wordArr, int size)
 		}
 		else
 		{
+			lastChar = wordArr[i].piglatin.at(wordArr[i].piglatin.size()-1);
 			wordArr[i].piglatin = wordArr[i].english;
 			wordArr[i].piglatin.erase(0,1);
 			if(lastWord)
