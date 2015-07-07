@@ -49,12 +49,12 @@ void translate(Word * wordArr, int size)
 		char firstLetter = wordArr[i].english[0];
 		if((firstLetter == 'a' || firstLetter == 'e') || (firstLetter == 'i' || firstLetter == 'o') || (firstLetter == 'u'))
 		{
-			wordArr[i].english.copy(wordArr[i].piglatin, wordArr[i].english.size(), 0);
+			wordArr[i].english.copy(&wordArr[i].piglatin, wordArr[i].english.size(), 0);
 			wordArr[i].piglatin += appendVow;
 		}
 		else
 		{
-			wordArr[i].english.copy(wordArr[i].piglatin, wordArr[i].english.size(), 1);
+			wordArr[i].english.copy(&wordArr[i].piglatin, wordArr[i].english.size(), 1);
 			wordArr[i].piglatin += firstLetter;
 			wordArr[i].piglatin += appendCon;
 		}
