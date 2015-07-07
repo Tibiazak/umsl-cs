@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <ctype.h>
 using namespace std;
 
 struct Word {
@@ -26,7 +27,11 @@ Word * init_array (string sentence, int &numWords)
 		{
 			itr++;
 		}
-		else if ((sentence[i] <= 'Z' && sentence[i] >= 'A') || (sentence[i] <= 'z' && sentence[i] >= 'a'))
+		else if (sentence[i] <= 'Z' && sentence[i] >= 'A')
+		{
+			itr->english += tolower(sentence[i]);
+		}
+		else if(sentence[i] <= 'z' && sentence[i] >= 'a')
 		{
 			itr->english += sentence[i];
 		}
