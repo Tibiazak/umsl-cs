@@ -12,7 +12,7 @@ Word * init_array (string sentence, int &numWords)
 	numWords = 0;
 	for(int i = 0; i < sentence.size(); i++)
 	{
-		if (sentence[i] == " ")
+		if (sentence[i] == ' ')
 		{
 			numWords++;
 		}
@@ -22,7 +22,7 @@ Word * init_array (string sentence, int &numWords)
 	Word * itr = wordArr;
 	for(int i = 0; i < sentence.size(); i++)
 	{
-		if(sentence[i] == " ")
+		if(sentence[i] == ' ')
 		{
 			itr++;
 		}
@@ -65,7 +65,7 @@ void showTranslation(Word * wordArr)
 {
 	for(int i = 0; i < size; i++)
 	{
-		cout << wordArr[i]->piglatin << " ";
+		cout << wordArr[i]->piglatin << ' ';
 	}
 }
 
