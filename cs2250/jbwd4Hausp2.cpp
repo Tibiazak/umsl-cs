@@ -10,10 +10,8 @@ struct Word {
 Word * init_array (string sentence, int &numWords)
 {
 	numWords = 0;
-	cout << sentence << endl;
 	for(int i = 0; i < sentence.size(); i++)
 	{
-		cout << "for loop number 1, line 15" << endl;
 		if (sentence[i] == ' ')
 		{
 			numWords++;
@@ -22,15 +20,13 @@ Word * init_array (string sentence, int &numWords)
 
 	Word * wordArr = new Word[numWords];
 	Word * itr = wordArr;
-	itr->english = sentence[0];
-	for(int i = 1; i < sentence.size(); i++)
+	for(int i = 0; i < sentence.size(); i++)
 	{
+		cout << sentence[i] << endl;
 		cout << "for loop number 2, line 26" << endl;
 		if(sentence[i] == ' ')
 		{
 			itr++;
-			itr->english = sentence[i+1];
-			i++;
 		}
 		else if ((sentence[i] < 'Z' && sentence[i] > 'A') || (sentence[i] <'z' && sentence[i] > 'a'))
 		{
