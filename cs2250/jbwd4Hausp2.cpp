@@ -46,17 +46,17 @@ void translate(Word * wordArr, int size)
 
 	for(int i = 0; i < size; i++)
 	{
-		char firstLetter = wordArr[i]->english[0];
-		if(isVowel(firstLetter))
+		char firstLetter = wordArr[i].english[0];
+		if((firstLetter == 'a' || firstLetter == 'e') || (firstLetter == 'i' || firstLetter == 'o') || (firstLetter == 'u'))
 		{
-			wordArr[i]->english.copy(wordArr[i]->piglatin, wordArr[i]->english.size(), 0);
-			wordArr[i]->piglatin += appendVow;
+			wordArr[i].english.copy(wordArr[i].piglatin, wordArr[i].english.size(), 0);
+			wordArr[i].piglatin += appendVow;
 		}
 		else
 		{
-			wordArr[i]->english.copy(wordArr[i]->piglatin, wordArr[i]->english.size(), 1);
-			wordArr[i]->piglatin += firstLetter;
-			wordArr[i]->piglatin += appendCon;
+			wordArr[i].english.copy(wordArr[i].piglatin, wordArr[i].english.size(), 1);
+			wordArr[i].piglatin += firstLetter;
+			wordArr[i].piglatin += appendCon;
 		}
 	}
 }
