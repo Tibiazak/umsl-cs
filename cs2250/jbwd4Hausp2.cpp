@@ -19,9 +19,24 @@ Word * init_array (string sentence, int &numWords)
 	}
 
 	Word * wordArr = new Word[numWords];
-	//TODO - copy the words from sentence into the struct array while ignoring punctuation
+	Word * itr = wordArr;
+	for(int i = 0; i < sentence.size(); i++)
+	{
+		if(sentence[i] == " ")
+		{
+			itr++;
+		}
+		else if ((sentence[i] < 'Z' && sentence[i] > 'A') || (sentence[i] <'z' && sentence[i] > 'a'))
+		{
+			itr->english.append(sentence[i]);
+		}
+		else if (i == sentence.size() -1)
+		{
+			itr->english.append(sentence[i]);
+		}
+	}
 
-	return init_array;
+	return wordArr;
 }
 
 void translate(Word * wordArr, int size)
