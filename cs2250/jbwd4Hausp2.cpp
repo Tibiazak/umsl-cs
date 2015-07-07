@@ -86,7 +86,7 @@ int main()
 {
 	cout << "Please enter a string to convert to PigLatin:" << endl;
 	string sentence;
-	cin >> sentence;
+	getline(cin, sentence);
 	int size = 0;
 	Word * wordArr = 0;
 	wordArr = init_array(sentence, size);
