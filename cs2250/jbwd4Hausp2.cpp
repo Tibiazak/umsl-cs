@@ -12,6 +12,7 @@ Word * init_array (string sentence, int &numWords)
 	numWords = 0;
 	for(int i = 0; i < sentence.size(); i++)
 	{
+		cout << "for loop number 1, line 15" << endl;
 		if (sentence[i] == ' ')
 		{
 			numWords++;
@@ -22,18 +23,24 @@ Word * init_array (string sentence, int &numWords)
 	Word * itr = wordArr;
 	for(int i = 0; i < sentence.size(); i++)
 	{
+		cout << "for loop number 2, line 26" << endl;
 		if(sentence[i] == ' ')
 		{
 			itr++;
 		}
 		else if ((sentence[i] < 'Z' && sentence[i] > 'A') || (sentence[i] <'z' && sentence[i] > 'a'))
 		{
+			cout << "else if 1 before code executed, line 33" << endl;
 			itr->english += sentence[i];
+			cout << "after else if 1 code executes" << endl;
 		}
 		else if (i == sentence.size() -1)
 		{
+			cout << "else if 2 before code executes, line 39" << endl;
 			itr->english += sentence[i];
+			cout << "else if 2 after code executes" << endl;
 		}
+		cout << i << endl;
 	}
 
 	return wordArr;
