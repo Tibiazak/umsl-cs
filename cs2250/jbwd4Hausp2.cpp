@@ -26,6 +26,7 @@ Word * init_array (string sentence, int &numWords)
 		cout << "for loop number 2, line 26" << endl;
 		if(sentence[i] == ' ')
 		{
+			cout << itr->english << endl;
 			itr++;
 		}
 		else if ((sentence[i] < 'Z' && sentence[i] > 'A') || (sentence[i] <'z' && sentence[i] > 'a'))
