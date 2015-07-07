@@ -29,7 +29,7 @@ Word * init_array (string sentence, int &numWords)
 			cout << itr->english << endl;
 			itr++;
 		}
-		else if ((sentence[i] < 'Z' && sentence[i] > 'A') || (sentence[i] <'z' && sentence[i] > 'a'))
+		else if ((sentence[i] <= 'Z' && sentence[i] >= 'A') || (sentence[i] <= 'z' && sentence[i] >= 'a'))
 		{
 			cout << "else if 1 before code executed, line 33" << endl;
 			itr->english += sentence[i];
