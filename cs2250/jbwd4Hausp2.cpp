@@ -22,31 +22,23 @@ Word * init_array (string sentence, int &numWords)
 	Word * itr = wordArr;
 	for(int i = 0; i < sentence.size(); i++)
 	{
-		cout << sentence[i] << endl;
-		cout << "for loop number 2, line 26" << endl;
 		if(sentence[i] == ' ')
 		{
-			cout << itr->english << endl;
 			itr++;
 		}
 		else if ((sentence[i] <= 'Z' && sentence[i] >= 'A') || (sentence[i] <= 'z' && sentence[i] >= 'a'))
 		{
-			cout << "else if 1 before code executed, line 33" << endl;
 			itr->english += sentence[i];
-			cout << "after else if 1 code executes" << endl;
 		}
 		else if (i == sentence.size() -1)
 		{
-			cout << "else if 2 before code executes, line 39" << endl;
 			itr->english += sentence[i];
-			cout << "else if 2 after code executes" << endl;
 		}
 		cout << i << endl;
 	}
-
 	return wordArr;
 }
-/*
+
 void translate(Word * wordArr, int size)
 {
 	string appendCon = "ay";
@@ -78,7 +70,7 @@ void showTranslation(Word * wordArr, int size)
 		cout << wordArr[i].piglatin << ' ';
 	}
 }
-*/
+
 int main()
 {
 	cout << "Please enter a string to convert to PigLatin:" << endl;
@@ -87,9 +79,8 @@ int main()
 	int size = 0;
 	Word * wordArr = 0;
 	wordArr = init_array(sentence, size);
-	cout << "returned from wordArr" << endl;
-	//translate(wordArr, size);
-	//cout << "Output:" << endl;
-	//showTranslation(wordArr, size);
+	translate(wordArr, size);
+	cout << "Output:" << endl;
+	showTranslation(wordArr, size);
 	return 0;
 }
