@@ -9,7 +9,7 @@ struct Word {
 
 Word * init_array (string sentence, int &numWords)
 {
-	numWords = 0;
+	numWords = 1;
 	for(int i = 0; i < sentence.size(); i++)
 	{
 		if (sentence[i] == ' ')
