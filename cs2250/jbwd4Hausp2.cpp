@@ -10,6 +10,7 @@ struct Word {
 Word * init_array (string sentence, int &numWords)
 {
 	numWords = 0;
+	cout << sentence << endl;
 	for(int i = 0; i < sentence.size(); i++)
 	{
 		cout << "for loop number 1, line 15" << endl;
