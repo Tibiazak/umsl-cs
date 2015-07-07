@@ -49,7 +49,7 @@ void translate(Word * wordArr, int size)
 		char firstLetter = wordArr[i].english[0];
 		if((firstLetter == 'a' || firstLetter == 'e') || (firstLetter == 'i' || firstLetter == 'o') || (firstLetter == 'u'))
 		{
-			wordArr[i].piglatin = wordArr[i].english
+			wordArr[i].piglatin = wordArr[i].english;
 			wordArr[i].piglatin += appendVow;
 
 		}
