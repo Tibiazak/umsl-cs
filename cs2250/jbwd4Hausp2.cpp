@@ -28,11 +28,11 @@ Word * init_array (string sentence, int &numWords)
 		}
 		else if ((sentence[i] < 'Z' && sentence[i] > 'A') || (sentence[i] <'z' && sentence[i] > 'a'))
 		{
-			itr->english.append(sentence[i]);
+			itr->english += sentence[i];
 		}
 		else if (i == sentence.size() -1)
 		{
-			itr->english.append(sentence[i]);
+			itr->english += sentence[i];
 		}
 	}
 
@@ -61,11 +61,11 @@ void translate(Word * wordArr, int size)
 	}
 }
 
-void showTranslation(Word * wordArr)
+void showTranslation(Word * wordArr, int size)
 {
 	for(int i = 0; i < size; i++)
 	{
-		cout << wordArr[i]->piglatin << ' ';
+		cout << wordArr[i].piglatin << ' ';
 	}
 }
 
@@ -79,6 +79,6 @@ int main()
 	wordArr = init_array(sentence, size);
 	translate(wordArr, size);
 	cout << "Output:" << endl;
-	showTranslation(wordArr);
+	showTranslation(wordArr, size);
 	return 0;
 }
