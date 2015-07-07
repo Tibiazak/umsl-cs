@@ -34,7 +34,6 @@ Word * init_array (string sentence, int &numWords)
 		{
 			itr->english += sentence[i];
 		}
-		cout << i << endl;
 	}
 	return wordArr;
 }
@@ -56,7 +55,7 @@ void translate(Word * wordArr, int size)
 		else
 		{
 			wordArr[i].piglatin = wordArr[i].english;
-			wordArr[i].piglatin.erase(0,0);
+			wordArr[i].piglatin.erase(0,1);
 			wordArr[i].piglatin += firstLetter;
 			wordArr[i].piglatin += appendCon;
 		}
@@ -69,6 +68,7 @@ void showTranslation(Word * wordArr, int size)
 	{
 		cout << wordArr[i].piglatin << ' ';
 	}
+	cout << endl;
 }
 
 int main()
