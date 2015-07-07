@@ -38,7 +38,7 @@ Word * init_array (string sentence, int &numWords)
 
 	return wordArr;
 }
-
+/*
 void translate(Word * wordArr, int size)
 {
 	string appendCon = "ay";
@@ -70,7 +70,7 @@ void showTranslation(Word * wordArr, int size)
 		cout << wordArr[i].piglatin << ' ';
 	}
 }
-
+*/
 int main()
 {
 	cout << "Please enter a string to convert to PigLatin:" << endl;
@@ -79,8 +79,9 @@ int main()
 	int size = 0;
 	Word * wordArr = 0;
 	wordArr = init_array(sentence, size);
-	translate(wordArr, size);
-	cout << "Output:" << endl;
-	showTranslation(wordArr, size);
+	cout << returned from wordArr << endl;
+	//translate(wordArr, size);
+	//cout << "Output:" << endl;
+	//showTranslation(wordArr, size);
 	return 0;
 }
