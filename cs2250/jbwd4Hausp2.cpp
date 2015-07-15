@@ -1,13 +1,21 @@
+/*
+Joshua Bearden
+7/6/15
+A program to translate english to pig latin
+*/
+
 #include <iostream>
 #include <string>
 #include <ctype.h>
 using namespace std;
 
+//The word struct, contains strings in english and pig latin
 struct Word {
 	string english;
 	string piglatin;
 };
 
+//initializes the array of words
 Word * init_array (string sentence, int &numWords)
 {
 	numWords = 1;
@@ -43,6 +51,7 @@ Word * init_array (string sentence, int &numWords)
 	return wordArr;
 }
 
+//translates the words from english to pig latin
 void translate(Word * wordArr, int size)
 {
 	string appendCon = "ay";
@@ -57,6 +66,7 @@ void translate(Word * wordArr, int size)
 		{
 			lastWord = true;
 		}
+		//determines if the first letter is a vowel for the vowel translation
 		if((firstLetter == 'a' || firstLetter == 'e') || (firstLetter == 'i' || firstLetter == 'o') || (firstLetter == 'u'))
 		{
 			wordArr[i].piglatin = wordArr[i].english;
@@ -80,6 +90,7 @@ void translate(Word * wordArr, int size)
 				wordArr[i].piglatin += appendVow;
 			}
 		}
+		//if the first letter is a consonant
 		else
 		{
 			wordArr[i].piglatin = wordArr[i].english;
@@ -108,7 +119,7 @@ void translate(Word * wordArr, int size)
 		}
 	}
 }
-
+//displays the translated sentence
 void showTranslation(Word * wordArr, int size)
 {
 	for(int i = 0; i < size; i++)
