@@ -4,3 +4,90 @@ Josh Bearden
 A program designed to simulate horse racing
 */
 
+#include <Horse.h>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	int numHorses;
+	cout << "How many horses are in the race? ";
+	cin >> numHorses;
+	cout << endl;
+
+	Horse *hArr[numHorses];
+
+	for(int i = 0; i < numHorses; i++)
+	{
+		cout << "Please enter the name of horse " << i <<": ";
+		string name;
+		cin >> name;
+		cout << endl;
+
+		cout << "Please enter the name of rider " << i <<": ";
+		string rider;
+		cin >> rider;
+		cout << endl;
+
+		hArr[0] = new Horse(name, rider);
+	}
+	
+	int distance;
+	cout << "Please enter the distance of the race: ";
+	cin >> distance;
+	cout << endl;
+
+	cout << "The Start!" << endl;
+	bool finished = false;
+	int totalRaces = 1;
+	char flag;
+	while(!finished)
+	{
+		for(int i = 0; i < numHorses; i++)
+		{
+			hArr[i].runASecond();
+			hArr[i].toString();
+			if(hArr[i].getDistanceTraveled >= distance;)
+			{
+				finished = true;
+				hArr[i].incRacesWon();
+			}
+		}
+		if(finished)
+		{
+			for(int i = 0; i < numHorses; i++)
+			{
+				cout << hArr[i].getRider() << " has won " << hArr[i].getRacesWon << "/" << totalRaces << " races." << endl;
+			}
+		
+			cout << "Do you wish to continue? (y/n)";
+			cin >> flag;
+			cout << endl;
+			if(flag == 'y')
+			{
+				totalRaces++;
+				for(int i = 0; i < numHorses; i++)
+				{
+					hArr[i].sendToGate();
+				}
+				finished = false;
+				cout << "The Start!" << endl;
+			}
+		}
+		else
+		{
+			cout << "Are you ready for the next second? (y/n)";
+			cin >> flag;
+			if (flag == 'n')
+			{
+				finished = true;
+			}
+			cout << endl;
+		}
+	}
+	for(int i = 0; i < numHorses; i++)
+	{
+		delete(hArr[i]);
+	}
+}
