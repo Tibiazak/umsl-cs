@@ -33,6 +33,7 @@ void Horse::toString(int distance)
 {
 	int factor = distance / 50;
 	int position = factor / getDistanceTraveled();
+	cout << position << endl;
 	cout << '|';
 	for(int i = 0; i < 50; i++)
 	{
