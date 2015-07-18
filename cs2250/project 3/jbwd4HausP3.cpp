@@ -17,7 +17,6 @@ int main()
 	int numHorses;
 	cout << "How many horses are in the race? ";
 	cin >> numHorses;
-	cout << endl;
 
 	Horse *hArr[numHorses];
 
@@ -26,12 +25,11 @@ int main()
 		cout << "Please enter the name of horse " << i <<": ";
 		string name;
 		cin >> name;
-		cout << endl;
 
 		cout << "Please enter the name of rider " << i <<": ";
 		string rider;
 		cin >> rider;
-		cout << endl;
+
 
 		hArr[0] = new Horse(name, rider);
 	}
@@ -39,7 +37,6 @@ int main()
 	int distance;
 	cout << "Please enter the distance of the race: ";
 	cin >> distance;
-	cout << endl;
 
 	cout << "The Start!" << endl;
 	bool finished = false;
@@ -47,6 +44,7 @@ int main()
 	char flag;
 	while(!finished)
 	{
+		cout << "entering while loop" << endl;
 		for(int i = 0; i < numHorses; i++)
 		{
 			hArr[i]->runASecond();
