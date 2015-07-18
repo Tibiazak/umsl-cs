@@ -2,6 +2,8 @@
 #define HORSE_H
 #include <string>
 
+using namespace std;
+
 class Horse
 {
 	private:
