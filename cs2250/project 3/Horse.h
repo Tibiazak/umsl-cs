@@ -36,11 +36,11 @@ class Horse
 		int getRacesWon() const
 			{return racesWon;}
 
-		string getName() const
-			{return name; }
+		std::string getName() const
+			{return name;}
 
-		string getRider() const
-			{return rider; }
+		std::string getRider() const
+			{return rider;}
 
 		void toString(int);
 
