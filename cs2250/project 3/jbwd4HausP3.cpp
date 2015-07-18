@@ -31,7 +31,7 @@ int main()
 		cin >> rider;
 
 
-		hArr[0] = new Horse(name, rider);
+		hArr[i] = new Horse(name, rider);
 	}
 	
 	int distance;
