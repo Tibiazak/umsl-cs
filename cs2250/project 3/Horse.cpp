@@ -31,19 +31,19 @@ void Horse::runASecond()
 void toString(int distance)
 {
 	int factor = distance / 50;
-	int position = factor / distanceTraveled;
-	cout << '|';
+	int position = factor / this.distanceTraveled;
+	std::cout << '|';
 	for(int i = 0; i < 50; i++)
 	{
 		if(i = position)
 		{
-			cout << '>';
+			std::cout << '>';
 		}
 		else
 		{
-			cout << ' ';
+			std::cout << ' ';
 		}
 	}
-	cout << '|';
-	cout << name << ", ridden by " << rider << endl;
+	std::cout << '|';
+	std::cout << this.name << ", ridden by " << this.rider << endl;
 }
