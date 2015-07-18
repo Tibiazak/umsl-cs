@@ -4,7 +4,7 @@ Josh Bearden
 A program designed to simulate horse racing
 */
 
-#include <Horse.h>
+#include "Horse.h"
 #include <iostream>
 #include <string>
 #include <csdlib>
