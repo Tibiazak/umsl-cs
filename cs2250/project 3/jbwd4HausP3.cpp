@@ -42,10 +42,8 @@ int main()
 	bool finished = false;
 	int totalRaces = 1;
 	char flag;
-	char debug;
 	while(!finished)
 	{
-		cin >> debug;
 		for(int i = 0; i < numHorses; i++)
 		{
 			hArr[i]->runASecond();
