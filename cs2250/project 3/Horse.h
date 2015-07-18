@@ -7,8 +7,8 @@ using namespace std;
 class Horse
 {
 	private:
-		string name;
-		string rider;
+		std::string name;
+		std::string rider;
 		int maxRunningDistPerSecond;
 		int distanceTraveled;
 		int racesWon;
