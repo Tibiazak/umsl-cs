@@ -29,7 +29,7 @@ void Horse::runASecond()
 	distanceTraveled += (rand() % getMaxRunningDistPerSecond());
 }
 
-void toString(int distance)
+void Horse::toString(int distance)
 {
 	int factor = distance / 50;
 	int position = factor / getDistanceTraveled();
