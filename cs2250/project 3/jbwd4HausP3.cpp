@@ -44,7 +44,8 @@ int main()
 	char flag;
 	while(!finished)
 	{
-		cout << "entering while loop" << endl;
+		cout << "entering while loop, continue?" << endl;
+		cin >> char debug;
 		for(int i = 0; i < numHorses; i++)
 		{
 			hArr[i]->runASecond();
