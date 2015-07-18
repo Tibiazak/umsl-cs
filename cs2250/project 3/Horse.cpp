@@ -1,6 +1,7 @@
 #include "Horse.h"
 #include <string>
 #include <cstdlib>
+
 using namespace std;
 
 void Horse::setDistanceTraveled(int n)
@@ -29,8 +30,8 @@ void Horse::runASecond()
 
 void toString(int distance)
 {
-	factor = distance / 50;
-	position = factor / getDistanceTraveled();
+	int factor = distance / 50;
+	int position = factor / getDistanceTraveled();
 	cout << '|';
 	for(int i = 0; i < 50; i++)
 	{

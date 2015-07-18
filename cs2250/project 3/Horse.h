@@ -24,7 +24,7 @@ class Horse
 		void incRacesWon()
 			{ racesWon++; }
 
-		void sendToGate();
+		void sendToGate()
 			{ distanceTraveled = 0; }
 
 		void runASecond();
