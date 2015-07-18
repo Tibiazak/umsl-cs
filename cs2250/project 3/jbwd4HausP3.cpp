@@ -7,7 +7,7 @@ A program designed to simulate horse racing
 #include "Horse.h"
 #include <iostream>
 #include <string>
-#include <csdlib>
+#include <cstdlib>
 #include <time.h>
 using namespace std;
 
