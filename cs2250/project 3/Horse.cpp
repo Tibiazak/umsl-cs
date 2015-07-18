@@ -36,7 +36,7 @@ void Horse::toString(int distance)
 	cout << '|';
 	for(int i = 0; i < 50; i++)
 	{
-		if(i = position)
+		if(i == position)
 		{
 			cout << '>';
 		}
