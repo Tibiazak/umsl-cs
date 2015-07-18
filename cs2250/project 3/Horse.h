@@ -27,10 +27,6 @@ class Horse
 		void sendToGate()
 			{ distanceTraveled = 0; }
 
-		void runASecond();
-
-		void toString(int);
-
 		int getMaxRunningDistPerSecond() const
 			{return maxRunningDistPerSecond;}
 
@@ -45,6 +41,10 @@ class Horse
 
 		string getRider() const
 			{return rider; }
+
+		void toString(int);
+
+		void runASecond();
 };
 
 #endif
