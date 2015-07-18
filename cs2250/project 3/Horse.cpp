@@ -1,5 +1,6 @@
 #include "Horse.h"
 #include <string>
+#include <cstdlib>
 using namespace std;
 
 void Horse::setDistanceTraveled(int n)
