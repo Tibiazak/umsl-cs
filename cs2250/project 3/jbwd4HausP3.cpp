@@ -51,7 +51,7 @@ int main()
 		{
 			hArr[i]->runASecond();
 			hArr[i]->toString(distance);
-			if(hArr[i]->getDistanceTraveled >= distance;)
+			if(hArr[i]->getDistanceTraveled() >= distance)
 			{
 				finished = true;
 				hArr[i]->incRacesWon();
@@ -61,7 +61,7 @@ int main()
 		{
 			for(int i = 0; i < numHorses; i++)
 			{
-				cout << hArr[i]->getRider() << " has won " << hArr[i].getRacesWon << "/" << totalRaces << " races." << endl;
+				cout << hArr[i]->getRider() << " has won " << hArr[i]->getRacesWon() << "/" << totalRaces << " races." << endl;
 			}
 		
 			cout << "Do you wish to continue? (y/n)";
