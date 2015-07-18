@@ -46,6 +46,7 @@ int main()
 	{
 		for(int i = 0; i < numHorses; i++)
 		{
+			cout << hArr[i]->getMaxRunningDistPerSecond() << " " << hArr[i]->getDistanceTraveled << endl;
 			hArr[i]->runASecond();
 			hArr[i]->toString(distance);
 			if(hArr[i]->getDistanceTraveled() >= distance)
