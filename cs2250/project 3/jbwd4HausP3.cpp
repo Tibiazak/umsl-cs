@@ -7,10 +7,13 @@ A program designed to simulate horse racing
 #include <Horse.h>
 #include <iostream>
 #include <string>
+#include <csdlib>
+#include <time.h>
 using namespace std;
 
 int main()
 {
+	srand(time(NULL));
 	int numHorses;
 	cout << "How many horses are in the race? ";
 	cin >> numHorses;
@@ -47,7 +50,7 @@ int main()
 		for(int i = 0; i < numHorses; i++)
 		{
 			hArr[i].runASecond();
-			hArr[i].toString();
+			hArr[i].toString(distance);
 			if(hArr[i].getDistanceTraveled >= distance;)
 			{
 				finished = true;

@@ -26,7 +26,7 @@ class Horse
 
 		void runASecond();
 
-		void toString();
+		void toString(int);
 
 		int getMaxRunningDistPerSecond() const
 			{return maxRunningDistPerSecond;}
@@ -36,6 +36,12 @@ class Horse
 
 		int getRacesWon() const
 			{return racesWon;}
+
+		string getName() const
+			{return name; }
+
+		string getRider() const
+			{return rider; }
 };
 
 #endif
