@@ -32,7 +32,7 @@ void Horse::runASecond()
 void toString(int distance)
 {
 	int factor = distance / 50;
-	int position = factor / this.distanceTraveled;
+	int position = factor / distanceTraveled;
 	cout << '|';
 	for(int i = 0; i < 50; i++)
 	{
@@ -46,5 +46,5 @@ void toString(int distance)
 		}
 	}
 	cout << '|';
-	cout << this.name << ", ridden by " << this.rider << endl;
+	cout << name << ", ridden by " << rider << endl;
 }
