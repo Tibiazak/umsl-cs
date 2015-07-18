@@ -49,8 +49,14 @@ int main()
 		cin >> debug;
 		for(int i = 0; i < numHorses; i++)
 		{
+			cout << "pre runASecond, continue?" << endl;
+			cin >> debug;
 			hArr[i]->runASecond();
+			cout << "post runASecond, continue?" << endl;
+			cin >> debug;
 			hArr[i]->toString(distance);
+			cout << "post toString, distance is " << distance << "continue?" << endl;
+			cin >> debug;
 			if(hArr[i]->getDistanceTraveled() >= distance)
 			{
 				finished = true;
