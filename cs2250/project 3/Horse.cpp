@@ -20,18 +20,18 @@ Horse::Horse(string newName, string newRider)
 	rider = newRider;
 	racesWon = 0;
 	distanceTraveled = 0;
-	setMaxRunningDistPerSecond(rand() % 100+1);
+	maxRunningDistPerSecond = rand() % 100+1;
 }
 
 void Horse::runASecond()
 {
-	distanceTraveled += (rand() % getMaxRunningDistPerSecond());
+	distanceTraveled += (rand() % maxRunningDistPerSecond);
 }
 
 void toString(int distance)
 {
 	int factor = distance / 50;
-	int position = factor / getDistanceTraveled();
+	int position = factor / distanceTraveled;
 	cout << '|';
 	for(int i = 0; i < 50; i++)
 	{
@@ -45,5 +45,5 @@ void toString(int distance)
 		}
 	}
 	cout << '|';
-	cout << getName() << ", ridden by " << getRider() << endl;
+	cout << name << ", ridden by " << rider << endl;
 }
