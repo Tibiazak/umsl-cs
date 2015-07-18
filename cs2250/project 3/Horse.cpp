@@ -32,18 +32,18 @@ void toString(int distance)
 {
 	int factor = distance / 50;
 	int position = factor / this.distanceTraveled;
-	std::cout << '|';
+	cout << '|';
 	for(int i = 0; i < 50; i++)
 	{
 		if(i = position)
 		{
-			std::cout << '>';
+			cout << '>';
 		}
 		else
 		{
-			std::cout << ' ';
+			cout << ' ';
 		}
 	}
-	std::cout << '|';
-	std::cout << this.name << ", ridden by " << this.rider << endl;
+	cout << '|';
+	cout << this.name << ", ridden by " << this.rider << endl;
 }
