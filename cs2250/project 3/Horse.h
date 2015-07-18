@@ -1,5 +1,6 @@
 #ifndef HORSE_H
 #define HORSE_H
+#include <string>
 
 class Horse
 {
