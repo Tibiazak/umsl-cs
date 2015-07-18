@@ -49,19 +49,19 @@ int main()
 	{
 		for(int i = 0; i < numHorses; i++)
 		{
-			hArr[i].runASecond();
-			hArr[i].toString(distance);
-			if(hArr[i].getDistanceTraveled >= distance;)
+			hArr[i]->runASecond();
+			hArr[i]->toString(distance);
+			if(hArr[i]->getDistanceTraveled >= distance;)
 			{
 				finished = true;
-				hArr[i].incRacesWon();
+				hArr[i]->incRacesWon();
 			}
 		}
 		if(finished)
 		{
 			for(int i = 0; i < numHorses; i++)
 			{
-				cout << hArr[i].getRider() << " has won " << hArr[i].getRacesWon << "/" << totalRaces << " races." << endl;
+				cout << hArr[i]->getRider() << " has won " << hArr[i].getRacesWon << "/" << totalRaces << " races." << endl;
 			}
 		
 			cout << "Do you wish to continue? (y/n)";
@@ -72,7 +72,7 @@ int main()
 				totalRaces++;
 				for(int i = 0; i < numHorses; i++)
 				{
-					hArr[i].sendToGate();
+					hArr[i]->sendToGate();
 				}
 				finished = false;
 				cout << "The Start!" << endl;
