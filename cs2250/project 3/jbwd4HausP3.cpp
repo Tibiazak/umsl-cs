@@ -52,10 +52,10 @@ int main()
 			cout << "pre runASecond, continue?" << endl;
 			cin >> debug;
 			hArr[i]->runASecond();
-			cout << "post runASecond, continue?" << endl;
+			cout << "post runASecond, distance is " << distance << " continue?" << endl;
 			cin >> debug;
 			hArr[i]->toString(distance);
-			cout << "post toString, distance is " << distance << "continue?" << endl;
+			cout << "post toString, continue?" << endl;
 			cin >> debug;
 			if(hArr[i]->getDistanceTraveled() >= distance)
 			{
