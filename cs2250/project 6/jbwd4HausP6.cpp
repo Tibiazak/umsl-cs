@@ -70,7 +70,7 @@ int main()
 	cout << endl;
 
 	cout << "Please enter a string to be reversed: ";
-	cin >> str;
+	getline(cin, str);
 	str = reverseString(str);
 	cout << str << endl;
 
