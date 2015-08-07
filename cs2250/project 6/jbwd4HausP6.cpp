@@ -3,6 +3,18 @@ using namespace std;
 #include <stack>
 #include <string>
 
+int reverseInt(int n)
+{
+	if(int/10 == 0)
+	{
+		return 0;
+	}
+
+	int digit = n%10;
+	cout << digit;
+	reverseInt(n/10);
+	return digit;
+}
 
 string reverseString(string str)
 {
@@ -16,7 +28,6 @@ string reverseString(string str)
 	string reversed = str;
 	for(int i = 0; i < str.length(); i++)
 	{
-		cout << strStack.top() << endl;
 		reversed[i] = strStack.top();
 		strStack.pop();
 	}
@@ -57,5 +68,7 @@ int main()
 	{
 		cout << arr[i] << endl;
 	}
+
+	reverseInt(2535);
 	return 0;
 }
