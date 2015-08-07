@@ -15,6 +15,7 @@ void Horse::setMaxRunningDistPerSecond(int n)
 	maxRunningDistPerSecond = n;
 }
 
+//constructor
 Horse::Horse(string newName, string newRider)
 {
 	name = newName;
@@ -24,16 +25,17 @@ Horse::Horse(string newName, string newRider)
 	maxRunningDistPerSecond = rand() % 100+1;
 }
 
+//gets the distance traveled using rand
 void Horse::runASecond()
 {
 	distanceTraveled += (rand() % getMaxRunningDistPerSecond());
 }
 
+//graphically displays the position of the horse
 void Horse::toString(int distance)
 {
 	int factor = distance / 50;
 	int position = distanceTraveled/factor;
-	cout << position << endl;
 	cout << '|';
 	for(int i = 0; i < 50; i++)
 	{
@@ -48,7 +50,7 @@ void Horse::toString(int distance)
 	}
 	if(position >= 50)
 	{
-		cout << "|>";
+		cout << "|> ";
 	}
 	else
 	{	
