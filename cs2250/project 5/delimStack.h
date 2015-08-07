@@ -25,8 +25,8 @@ class delimStack
 			{top = 0;}
 		~delimStack();
 
-		void push(delim);
-		void pop(delim &);
+		void push(char, int, int);
+		void pop(char &, int&, int&);
 		bool isEmpty();
 };
 #endif
