@@ -44,7 +44,7 @@ int main()
 {
 	cout << "Please enter your text, type DONE when you are finished." << endl;
 
-	delimStack stack = new delimStack();
+	delimStack stack;
 
 	string str;
 	int line = 0;
