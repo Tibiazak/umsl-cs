@@ -24,8 +24,8 @@ int main()
 	{
 		cout << "Please enter the name of horse " << i <<": ";
 		string name;
-		cin >> name;
-		cin.ignore();
+		getline(cin, name);
+		
 
 		cout << "Please enter the name of rider " << i <<": ";
 		string rider;
