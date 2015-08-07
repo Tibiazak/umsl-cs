@@ -16,6 +16,7 @@ string reverseString(string str)
 	string reversed;
 	for(int i = 0; i < str.length(); i++)
 	{
+		cout << strStack.top() << endl;
 		reversed[i] = strStack.top();
 		strStack.pop();
 	}
