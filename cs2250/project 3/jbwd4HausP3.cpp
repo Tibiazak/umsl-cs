@@ -17,6 +17,7 @@ int main()
 	int numHorses;
 	cout << "How many horses are in the race? ";
 	cin >> numHorses;
+	cin.ignore();
 
 	Horse *hArr[numHorses];
 
