@@ -66,6 +66,7 @@ int main()
 
 	cout << "Please enter an integer to be reversed: ";
 	cin >> n;
+	cin.ignore();
 	reverseInt(n);
 	cout << endl;
 
