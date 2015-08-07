@@ -34,7 +34,7 @@ void delimStack::push(char c, int line, int count)
 	}
 }
 
-void delimStack::pop(char c, int line, int count)
+void delimStack::pop(char & c, int & line, int & count)
 {
 	stackNode *temp = 0;
 
