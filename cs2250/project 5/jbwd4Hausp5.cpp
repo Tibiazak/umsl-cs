@@ -89,7 +89,7 @@ int main()
 			int lastLine;
 			int lastcount;
 			stack.pop(delim, lastLine, lastcount);
-			cout << "Left delimeter " << delim << "at line " << lastLine << ", char " << lastCount <<
+			cout << "Left delimeter " << delim << "at line " << lastLine << ", char " << lastcount <<
 			"had no right delimeter." << endl;
 		}
 	}
