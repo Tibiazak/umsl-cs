@@ -61,14 +61,16 @@ void selecSort(int * arr, int size)
 int main()
 {
 	srand(time(NULL));
+	int n = 0;
+	string str;
 
 	cout << "Please enter an integer to be reversed: ";
-	cin << int n;
+	cin << n;
 	reverseInt(n);
 	cout << endl;
 
 	cout << "Please enter a string to be reversed: ";
-	cin << string str;
+	cin << str;
 	str = reverseString(str);
 	cout << str << endl;
 
