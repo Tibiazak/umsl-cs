@@ -10,7 +10,7 @@ string reverseString(string str)
 
 	for(int i = 0; i < str.length(); i++)
 	{
-		mystack.emplace(str[i]);
+		strStack.emplace(str[i]);
 	}
 
 	string reversed;
@@ -47,10 +47,10 @@ void selecSort(int * arr, int size)
 int main()
 {
 	string str = "Hello";
-	rts = reverseString(str);
+	string rts = reverseString(str);
 	cout << str << " " << rts << endl;
 
-	int[] arr = {10, 9, 8, 7, 6, 5};
+	int arr [6] = {10, 9, 8, 7, 6, 5};
 	selecSort(arr, 6);
 	for(int i = 0; i < 6; i++)
 	{
