@@ -5,7 +5,7 @@ using namespace std;
 
 int reverseInt(int n)
 {
-	if(int/10 == 0)
+	if(n/10 == 0)
 	{
 		return 0;
 	}
