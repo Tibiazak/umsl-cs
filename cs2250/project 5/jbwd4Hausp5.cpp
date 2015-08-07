@@ -54,11 +54,11 @@ int main()
 		line++;
 		for (int i = 0; i < str.length(); i++)
 		{
-			if (isLdelim(str[i])
+			if (isLdelim(str[i]))
 			{
 				stack.push(str[i], line, i);
 			}
-			else if (isRDelim(str[i])
+			else if (isRDelim(str[i]))
 			{
 				char delim;
 				int lastLine;
