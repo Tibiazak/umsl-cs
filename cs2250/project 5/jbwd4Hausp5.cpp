@@ -54,7 +54,7 @@ int main()
 		line++;
 		for (int i = 0; i < str.length(); i++)
 		{
-			if (isLdelim(str[i]))
+			if (isLDelim(str[i]))
 			{
 				stack.push(str[i], line, i);
 			}
