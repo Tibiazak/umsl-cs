@@ -2,6 +2,8 @@ using namespace std;
 #include <iostream>
 #include <stack>
 #include <string>
+#include <time.h>
+#include <stdlib.h>
 
 int reverseInt(int n)
 {
@@ -58,17 +60,29 @@ void selecSort(int * arr, int size)
 
 int main()
 {
-	string str = "Hello";
-	string rts = reverseString(str);
-	cout << str << " " << rts << endl;
+	srand(time(NULL));
 
-	int arr [6] = {10, 9, 8, 7, 6, 5};
-	selecSort(arr, 6);
-	for(int i = 0; i < 6; i++)
+	cout << "Please enter an integer to be reversed: ";
+	cin << int n;
+	reverseInt(n);
+	cout << endl;
+
+	cout << "Please enter a string to be reversed: ";
+	cin << string str;
+	str = reverseString(str);
+	cout << str << endl;
+
+	int arr [100];
+	for (int i = 0; i < 100; i++)
+	{
+		arr[i] = rand() % 1000;
+	}
+
+	selecSort(arr, 100);
+	for(int i = 0; i < 100; i++)
 	{
 		cout << arr[i] << endl;
 	}
 
-	reverseInt(2536);
 	return 0;
 }
