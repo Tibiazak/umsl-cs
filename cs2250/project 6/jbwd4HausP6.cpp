@@ -5,15 +5,13 @@ using namespace std;
 
 int reverseInt(int n)
 {
-	if(n/10 == 0)
-	{
-		return 0;
-	}
-
 	int digit = n%10;
 	cout << digit;
 	reverseInt(n/10);
-	return digit;
+	if(n/10 == 0)
+		return 0;
+	else
+		return digit;
 }
 
 string reverseString(string str)
@@ -69,6 +67,6 @@ int main()
 		cout << arr[i] << endl;
 	}
 
-	reverseInt(2535);
+	reverseInt(2536);
 	return 0;
 }
