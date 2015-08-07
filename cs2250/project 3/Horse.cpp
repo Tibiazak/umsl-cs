@@ -48,7 +48,7 @@ void Horse::toString(int distance)
 	}
 	if(position > 50)
 	{
-		cout << '|>';
+		cout << "|>";
 	}
 	else
 	{	

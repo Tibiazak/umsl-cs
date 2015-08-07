@@ -25,10 +25,11 @@ int main()
 		cout << "Please enter the name of horse " << i <<": ";
 		string name;
 		cin >> name;
+		cin.ignore();
 
 		cout << "Please enter the name of rider " << i <<": ";
 		string rider;
-		cin >> rider;
+		getline(cin, rider);
 
 
 		hArr[i] = new Horse(name, rider);
