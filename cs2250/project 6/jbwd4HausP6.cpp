@@ -13,7 +13,7 @@ string reverseString(string str)
 		strStack.emplace(str[i]);
 	}
 
-	string reversed;
+	string reversed = str;
 	for(int i = 0; i < str.length(); i++)
 	{
 		cout << strStack.top() << endl;
