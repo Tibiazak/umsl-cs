@@ -44,7 +44,7 @@ void delimStack::pop(char & c, int & line, int & count)
 	}
 	else
 	{
-		c = top->value.char;
+		c = top->value.c;
 		line = top->value.line;
 		count = top->value.charCount;
 		temp = top->next;
