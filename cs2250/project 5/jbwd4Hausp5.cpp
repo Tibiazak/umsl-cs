@@ -65,8 +65,8 @@ int main()
 				int lastCount;
 				if(stack.isEmpty())
 				{
-					cout << "Right delimeter " << str[i] << "had not left delimeter found at line " << line <<
-					"char " << i << endl;
+					cout << "Right delimeter " << str[i] << " had not left delimeter found at line " << line <<
+					" char " << i << endl;
 				}
 				else
 				{
@@ -74,9 +74,9 @@ int main()
 				}
 				if(!delimMatch(delim, str[i]))
 				{
-					cout << "Mismatched delimeter" << delim << "found at line " << lastLine <<
-					"char " << lastCount << "does not match " << str[i] << "found at line " << line <<
-					"char " << i << endl;
+					cout << "Mismatched delimeter " << delim << " found at line " << lastLine <<
+					" char " << lastCount << " does not match " << str[i] << " found at line " << line <<
+					" char " << i << endl;
 				}
 			}
 		}
@@ -89,8 +89,8 @@ int main()
 			int lastLine;
 			int lastcount;
 			stack.pop(delim, lastLine, lastcount);
-			cout << "Left delimeter " << delim << "at line " << lastLine << ", char " << lastcount <<
-			"had no right delimeter." << endl;
+			cout << "Left delimeter " << delim << " at line " << lastLine << ", char " << lastcount <<
+			" had no right delimeter." << endl;
 		}
 	}
 }
