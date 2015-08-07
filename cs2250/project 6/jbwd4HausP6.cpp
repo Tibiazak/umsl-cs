@@ -7,11 +7,13 @@ int reverseInt(int n)
 {
 	int digit = n%10;
 	cout << digit;
-	reverseInt(n/10);
 	if(n/10 == 0)
 		return 0;
 	else
+	{
+		reverseInt(n/10);
 		return digit;
+	}
 }
 
 string reverseString(string str)
