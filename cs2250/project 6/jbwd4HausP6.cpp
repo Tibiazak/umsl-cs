@@ -65,12 +65,12 @@ int main()
 	string str;
 
 	cout << "Please enter an integer to be reversed: ";
-	cin << n;
+	cin >> n;
 	reverseInt(n);
 	cout << endl;
 
 	cout << "Please enter a string to be reversed: ";
-	cin << str;
+	cin >> str;
 	str = reverseString(str);
 	cout << str << endl;
 
