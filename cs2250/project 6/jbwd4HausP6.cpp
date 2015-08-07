@@ -103,6 +103,7 @@ int main()
 	cout << str << endl;
 
 	int arr [100];
+	cout << "An unsorted array of 100 ints" << endl;
 	for (int i = 0; i < 100; i++)
 	{
 		arr[i] = rand() % 1000;
@@ -110,17 +111,20 @@ int main()
 	}
 
 	selecSort(arr, 100);
+	cout << "A sorted array of 100 ints" << endl;
 	for(int i = 0; i < 100; i++)
 	{
 		cout << arr[i] << endl;
 	}
 
+	cout << "An unsorted array of 100 ints" << endl;
 	for (int i = 0; i < 100; i++)
 	{
 		arr[i] = rand()%1000;
 		cout << arr[i] << endl;
 	}
 	bubbleSort(arr, 100);
+	cout << "A sorted array of 100 ints" << endl;
 	for(int i = 0; i < 100; i++)
 	{
 		cout << arr[i] << endl;
