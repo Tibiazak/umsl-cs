@@ -1,5 +1,6 @@
 using namespace std;
 #include "delimStack.h"
+#include <iostream>
 
 delimStack::~delimStack()
 {
@@ -13,11 +14,13 @@ delimStack::~delimStack()
 	}
 }
 
-void delimStack::push(delim d)
+void delimStack::push(char c, int line, int count)
 {
 	stackNode *newNode = 0;
 	newNode = new stackNode;
-	newNode->value = d;
+	newNode->value.c = c;
+	newNode->value.line = line;
+	newNode->value.charCount = count;
 
 	if(isEmpty())
 	{
@@ -31,7 +34,7 @@ void delimStack::push(delim d)
 	}
 }
 
-void delimStack::pop(delim &d)
+void delimStack::pop(char c, int line, int count)
 {
 	stackNode *temp = 0;
 
@@ -41,7 +44,9 @@ void delimStack::pop(delim &d)
 	}
 	else
 	{
-		d = top->value;
+		c = top->value.char;
+		line = top->value.line;
+		count = top->value.charCount;
 		temp = top->next;
 		delete top;
 		top = temp;

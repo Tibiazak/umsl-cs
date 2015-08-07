@@ -13,12 +13,13 @@ class delimStack
 			int charCount;
 		};
 
-		stackNode *top;
+
 		struct stackNode
 		{
 			delim value;
 			stackNode *next;
 		};
+		stackNode *top;
 	public:
 		delimStack()
 			{top = 0;}
