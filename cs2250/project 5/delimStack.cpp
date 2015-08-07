@@ -2,7 +2,7 @@ using namespace std;
 #include "delimStack.h"
 #include <iostream>
 
-delimStack::~delimStack()
+delimStack::~delimStack() //destructor, deletes every node in the stack
 {
 	stackNode *nodePtr = 0, *nextNode = 0;
 	nodePtr = top;
@@ -14,7 +14,7 @@ delimStack::~delimStack()
 	}
 }
 
-void delimStack::push(char c, int line, int count)
+void delimStack::push(char c, int line, int count) //adds a node to the stack
 {
 	stackNode *newNode = 0;
 	newNode = new stackNode;
@@ -22,7 +22,7 @@ void delimStack::push(char c, int line, int count)
 	newNode->value.line = line;
 	newNode->value.charCount = count;
 
-	if(isEmpty())
+	if(isEmpty()) //if stack is empty, just make it the new top, else add it to the last node
 	{
 		top = newNode;
 		newNode->next = 0;
@@ -34,7 +34,7 @@ void delimStack::push(char c, int line, int count)
 	}
 }
 
-void delimStack::pop(char & c, int & line, int & count)
+void delimStack::pop(char & c, int & line, int & count) //pops a node from the stack, returns values
 {
 	stackNode *temp = 0;
 
@@ -53,7 +53,7 @@ void delimStack::pop(char & c, int & line, int & count)
 	}
 }
 
-bool delimStack::isEmpty()
+bool delimStack::isEmpty() //checks if the stack is empty
 {
 	bool status;
 
