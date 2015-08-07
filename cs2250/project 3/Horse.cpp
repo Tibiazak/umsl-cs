@@ -46,6 +46,13 @@ void Horse::toString(int distance)
 			cout << ' ';
 		}
 	}
-	cout << '|';
+	if(position > 50)
+	{
+		cout << '|>';
+	}
+	else
+	{	
+		cout << '|';
+	}
 	cout << getName() << ", ridden by " << getRider() << endl;
 }
