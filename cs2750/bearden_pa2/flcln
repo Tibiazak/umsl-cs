@@ -1,0 +1,15 @@
+#!/bin/bash
+#Joshua Bearden
+#CS2750 PA2
+#Date 19/09/2017
+if [ $# -gt 0 ]
+then
+   target=$1
+else
+   target="."
+fi
+#still need to check for empty files and delete them
+#$9 is the name column
+#$5 is the size column
+find $target -type f -print | xargs ls -lhS |awk '{ print $9 }'
+find $target -type f -empty -exec rm -i {} + 

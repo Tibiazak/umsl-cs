@@ -1,0 +1,26 @@
+#!/bin/bash
+# Joshua Bearden
+# CS2750 PA2
+# Date 19/09/2017
+if [ $# -gt 0 ]
+then
+   total=$1
+else
+   total=20
+fi
+
+for (( i = 1 ; i < $(($total+1)) ; i++ ))
+do 
+   if [[ $(( $i % 3 )) -eq 0 && $(( $i % 5 )) -eq 0 ]]
+   then
+      echo fizzbuzz
+   elif [[ $(( $i % 3 )) -eq 0 ]]
+   then
+      echo fizz
+   elif [[ $(( $i % 5 )) -eq 0 ]]
+   then
+      echo buzz
+   else
+      echo $i
+   fi
+done

@@ -1,0 +1,42 @@
+#Joshua Bearden
+#CS2750 PA2
+#Date 19/09/2017
+function add () {
+   echo $(($1 + $2))
+}
+
+function sub () {
+   echo $(($1 - $2))
+}
+
+function mult () {
+   echo $(($1 * $2))
+}
+
+function div () {
+   echo $(($1 / $2))
+}
+
+if [[ ($(($2)) != $2) || ($(($3)) != $3) ]]
+   then echo The second and third parameters must be numbers!
+   exit 2
+fi
+
+case "$1" in
+   a)
+      add $2 $3
+      ;;
+   s)
+      sub $2 $3
+      ;;
+   m)
+      mult $2 $3
+      ;;
+   d)
+      div $2 $3
+      ;;
+   *)
+      echo The first parameter must be a, s, m, or d!
+      exit 1
+      ;;
+esac

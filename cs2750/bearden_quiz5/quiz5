@@ -1,0 +1,15 @@
+echo -e 'enter the first number: \c'
+read num1
+echo -e 'enter the second number: \c'
+read num2
+sum=0
+sum=$(($num1 + $num2))
+echo $sum
+if [ `expr $sum % 2` -gt 0 ]
+then
+  echo 'The sum is odd'
+  exit 0
+else
+  echo 'The sum is even'
+  exit 0
+fi

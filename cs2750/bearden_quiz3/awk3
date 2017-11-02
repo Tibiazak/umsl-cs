@@ -1,0 +1,4 @@
+#Joshua Bearden
+#CS2750
+#05/09/2017
+NF > 5 {print $0;}

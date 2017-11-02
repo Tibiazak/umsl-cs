@@ -1,0 +1,13 @@
+# Joshua Bearden
+# CS2750 PA1
+# 05/09/2017
+BEGIN { print "<< Start of file >>"; n=0}
+NR >= 3 && NR <= 5 {
+   printf "Line %d: ", NR;
+   for (i = NF; i >= 1; i--){
+       printf "%s ", $i;
+       n++;
+   }
+   printf "\n";
+}
+END {printf "<< End of file: wordCount = %d >> \n", n}
